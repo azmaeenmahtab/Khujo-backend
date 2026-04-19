@@ -1,0 +1,29 @@
+{
+  "name": "khujo-demo-backend",
+  "version": "0.1.0",
+  "description": "Small Express scaffold for Khujo Demo",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/vision": "^5.3.4",
+    "dotenv": "^17.2.3",
+    "exif-parser": "^0.1.12",
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.9.2",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
