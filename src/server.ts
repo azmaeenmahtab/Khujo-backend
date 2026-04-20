@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import rootRouter from './routes/index';
 import ocrRouter from './routes/ocr';
 import reportSubmitRoute from './routes/reportSubmitRoute'
+import connectDB from './db/index';
 
 dotenv.config();
 
@@ -28,6 +29,12 @@ app.use('/report', reportSubmitRoute);
 
 
 console.log('OCR router mounted at /api');
+
+const startServer = async () =>{
+  await connectDB();
+}
+
+startServer();
 
 app.listen(PORT, () => {
   console.log(`Khujo Demo Backend listening on port ${PORT}`);

@@ -2,10 +2,10 @@
   "name": "khujo-demo-backend",
   "version": "0.1.0",
   "description": "Small Express scaffold for Khujo Demo",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "scripts": {
-    "start": "node dist/index.js",
-    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch src --exec ts-node src/server.ts",
     "build": "tsc"
   },
   "keywords": [],
