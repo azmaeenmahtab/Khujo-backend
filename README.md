@@ -35,6 +35,7 @@ This backend is currently a demo implementation. The target production behavior 
 - `docs/BACKEND_SYSTEM_DOCUMENTATION.md` — Full backend architecture, user flows, profile-completion contract, verification pipeline, and implementation checklist.
 - `docs/API_REFERENCE.md` — Implemented API contracts plus planned production API contracts.
 - `docs/CLERK_BACKEND_INTEGRATION.md` — Clerk frontend/backend integration strategy with JWT verification rules.
+- `docs/DATABASE_SCHEMA_DOCUMENTATION.md` — PostgreSQL schema for `users` and `reports`, constraints, indexes, and `updated_at` trigger.
 
 ## Notes
 - TypeScript config: `tsconfig.json`
