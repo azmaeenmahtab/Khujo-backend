@@ -3,6 +3,6 @@ import { ReportSubmitController } from "../controllers/reportSubmitController";
 const router = Router();
 
 
-router.post("/submit-report", ReportSubmitController);
+router.post("/submit", ReportSubmitController);
 
 export default router;

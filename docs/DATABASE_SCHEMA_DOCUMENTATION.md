@@ -39,7 +39,8 @@ CREATE TABLE users (
 Columns:
 - `id` `BIGSERIAL` primary key
 - `user_id` `BIGINT` foreign key to `users(id)`
-- `imei_number` `VARCHAR(20)` indexed, not null
+- `imei_number_1` `VARCHAR(20)` indexed, not null
+- `imei_number_2` `VARCHAR(20)` indexed, nullable
 - `phone_brand` `TEXT` not null
 - `phone_model` `TEXT` not null
 - `theft_location` `TEXT` not null
@@ -67,7 +68,8 @@ SQL:
 CREATE TABLE reports (
     id BIGSERIAL PRIMARY KEY,
     user_id BIGINT NOT NULL REFERENCES users(id),
-    imei_number VARCHAR(20) NOT NULL,
+    imei_number_1 VARCHAR(20) NOT NULL,
+    imei_number_2 VARCHAR(20) NULL,
     phone_brand TEXT NOT NULL,
     phone_model TEXT NOT NULL,
     theft_location TEXT NOT NULL,
@@ -84,7 +86,8 @@ CREATE TABLE reports (
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_reports_imei_number ON reports(imei_number);
+CREATE INDEX idx_reports_imei_number_1 ON reports(imei_number_1);
+CREATE INDEX idx_reports_imei_number_2 ON reports(imei_number_2);
 ```
 
 ## 4) `updated_at` Trigger
