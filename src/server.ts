@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import rootRouter from './routes/index';
 import ocrRouter from './routes/ocr';
 import reportSubmitRoute from './routes/reportSubmitRoute'
+import signupRoute from './routes/auth/signupRoute'
 import connectDB from './db/index';
 
 dotenv.config();
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', rootRouter);
 app.use('/api', ocrRouter);
 app.use('/report', reportSubmitRoute);
+app.use('/auth', signupRoute)
 
 
 
