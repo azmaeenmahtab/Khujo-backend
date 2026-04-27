@@ -6,7 +6,11 @@ import { ReportSubmitInputType } from "../services/reportSubmitService";
 export const ReportSubmitController = async (req: Request, res: Response) => {
     
 
-    const {user_id, imei1, imei2, division, district, upazilla, street, gd_copy_image_url, phone_box_image_url, phone_brand, phone_model, theft_date } = req.body;
+    const {user_id,imei1, imei2, division, district, upazilla, street, gd_copy_image_url, phone_box_image_url, phone_brand, phone_model, theft_date } = req.body;
+
+    console.log(req, "request");
+
+   
 
     const theft_location = [street, upazilla, district, division].filter(Boolean).join(", ");
 
