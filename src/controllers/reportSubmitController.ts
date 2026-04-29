@@ -28,6 +28,8 @@ export const ReportSubmitController = async (req: Request, res: Response) => {
     try{
     const response = await ReportSubmitService(reportSubmitInput);
 
+    console.log("report submitted successfully", response);
+
     return res.status(200).json({
         message: "report successfully saved",
         report: response
