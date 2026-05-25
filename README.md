@@ -1,4 +1,4 @@
-# 📵 MobileSentry BD — Backend
+# 📵 KHUJO — Backend
 
 A document-verified stolen mobile phone reporting and IMEI lookup system built for Bangladesh. Users report stolen phones with a Police GD copy, which goes through a multi-stage automated verification pipeline before the phone's IMEI is indexed in the stolen device database.
 
