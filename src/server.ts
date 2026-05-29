@@ -4,7 +4,8 @@ import dotenv from 'dotenv';
 import rootRouter from './routes/index';
 import ocrRouter from './routes/ocr';
 import reportSubmitRoute from './routes/reportSubmitRoute'
- import connectDB from './db/index';
+import connectDB from './db/index';
+import imeiCheckRoute from './routes/imeiCheck.route';
 
 dotenv.config();
 
@@ -33,6 +34,7 @@ app.use(
 app.use('/', rootRouter);
 app.use('/api', ocrRouter);
 app.use('/report', reportSubmitRoute);
+app.use('/check-imei', imeiCheckRoute);
  
 
 
